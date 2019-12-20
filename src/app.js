@@ -6,6 +6,7 @@ const helmet = require('helmet')
 const pupsRouter = require('./pups/pups-router')
 const usersRouter = require('./users/users-router')
 const authRouter = require('./auth/auth-router')
+const pupServicesRouter = require('./pup_services/pup-services-router')
 
 const { NODE_ENV } = require('./config')
 
@@ -19,13 +20,14 @@ app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors())
 
+app.use('/api/users', usersRouter)
+app.use('/api/auth', authRouter)
 app.use('/api/pups', pupsRouter)
+app.use('/api/pup_services', pupServicesRouter)
 
 app.get('/', (req,res) => {
   res.send('Hello, world!')
 })
-app.use('/api/users', usersRouter)
-app.use('/api/auth', authRouter)
 
 app.use(function errorHandler(error, req, res, next) {
    let response
