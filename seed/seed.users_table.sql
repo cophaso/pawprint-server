@@ -13,6 +13,11 @@ INSERT INTO users (
         'Amber',
         'amber@work.com',
         'lovesdog2'
+    ),
+        (
+        'Kayla',
+        'kayla@test.com',
+        'testing123'
     );
 
 COMMIT;
