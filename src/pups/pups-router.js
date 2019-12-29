@@ -64,7 +64,7 @@ pupsRouter
         .then(pup =>{
             if(!pup){
                 return res.status(404).json({
-                    error: {message: `Pup doesn't exist`}
+                    error: `Pup doesn't exist`
                 })
             }
 
@@ -80,7 +80,7 @@ pupsRouter
         
         if(numberOfValues === 0){
             return res.status(400).json({
-                error: {message: `Request must contain either 'pup_name', 'breed', 'allergies', or 'hobbies'`}
+                error: `Request must contain either 'pup_name', 'breed', 'allergies', or 'hobbies'`
             })
         }
 

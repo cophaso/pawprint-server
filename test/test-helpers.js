@@ -87,8 +87,8 @@ function makeAuthHeader(user, secret = process.env.JWT_SECRET) {
 
 function makePupsFixtures() {
   const testUsers = makeUsersArray()
-  const testItineraries = makePupsArray(testUsers)
-  return { testUsers, testItineraries }
+  const testPups = makePupsArray(testUsers)
+  return { testUsers, testPups }
 }
 
 function cleanTables(db) {
