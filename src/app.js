@@ -23,7 +23,7 @@ app.use(cors())
 app.use('/api/users', usersRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/pups', pupsRouter)
-app.use('/api/pup_services', pupServicesRouter)
+app.use('/api/pup-services', pupServicesRouter)
 
 app.get('/', (req,res) => {
   res.send('Hello, world!')
