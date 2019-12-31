@@ -37,11 +37,11 @@ CREATE TABLE IF NOT EXISTS pups (
 
 -- insert pups
 INSERT INTO pups
-  (pup_name, breed, allergies, hobbies)
+  (pup_name, breed, allergies, hobbies, image_url)
   VALUES
-    ('Cocoa', 'Lab', 'Peanuts', 'Plays Ball'),
-    ('Bear', 'Australian Monster', 'Hoomans', 'Protecting my fortress'), 
-    ('Future', 'Golden RetrievePit', 'Fake people', 'Waiting for crystal to adopt me');
+    ('Cocoa', 'Lab', 'Peanuts', 'Plays Ball', 'https://i.pinimg.com/originals/63/45/38/634538e61eb1fae4d51c345f6b47f376.jpg'),
+    ('Bear', 'Australian Monster', 'Hoomans', 'Protecting my fortress', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Redtriaussie01.jpg/440px-Redtriaussie01.jpg'), 
+    ('Future', 'Golden RetrievePit', 'Fake people', 'Waiting for crystal to adopt me', 'https://upload.wikimedia.org/wikipedia/commons/9/93/Golden_Retriever_Carlos_%2810581910556%29.jpg');
 
 -- now the parent_id relationship between users and pups is possible
 
