@@ -1,8 +1,31 @@
 const PupsServiceService = {
   getAllServiceInfo(db) {
     return db
-      .from('pup_services')
-      .select('*')
+      .from('pup_services AS ps')
+      .select(
+        'ps.id',
+        'ps.date',
+        'ps.service_type',
+        'ps.note',
+        db.raw(
+          `row_to_json(
+            (SELECT tmp FROM (
+              SELECT
+                p.id,
+                p.pup_name,
+                p.parent_id,
+                p.breed,
+                p.allergies,
+                p.hobbies
+            ) tmp)
+          ) AS "pup"`
+        )
+      )
+      .leftJoin(
+        'pups AS p',
+        'ps.pup_id',
+        'p.id',
+      )
   },
   insertService(db, newService) {
     return db

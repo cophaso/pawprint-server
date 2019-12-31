@@ -9,10 +9,9 @@ const jsonParser = express.json()
 const sanitizedPupService = pup_service => ({
     id: pup_service.id,
     date: xss(pup_service.date),
-    pup_id: pup_service.pup_id,
-    pup_name: xss(pup_service.pup_name),
     service_type: xss(pup_service.service_type),
-    note: xss(pup_service.note)
+    note: xss(pup_service.note),
+    pup: pup_service.pup || {},
 })
 
 pupServicesRouter
