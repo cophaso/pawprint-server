@@ -15,7 +15,7 @@ const PupsService = {
     },
     getById(db, id){
         return PupsService.getAllPupInfo(db)
-            .where('pup.id', id)
+            .where('pups.id', id)
             .first()
     },
     deletePup(db, id){

@@ -87,7 +87,7 @@ function makeAuthHeader(user, secret = process.env.JWT_SECRET) {
 
 function makePupsFixtures() {
   const testUsers = makeUsersArray()
-  const testPups= makePupsArray(testUsers)
+  const testPups = makePupsArray(testUsers)
   return { testUsers, testPups }
 }
 
