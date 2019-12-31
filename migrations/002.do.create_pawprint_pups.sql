@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS pups (
   parent_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
   breed TEXT NOT NULL,
   allergies TEXT,
-  hobbies TEXT
+  hobbies TEXT,
+  image_url TEXT
 );

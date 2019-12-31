@@ -13,6 +13,7 @@ const sanitizedPup = pup => ({
     breed: xss(pup.breed),
     allergies: xss(pup.allergies),
     hobbies: xss(pup.hobbies),
+    image_url: xss(pup.image_url)
 })
 
 pupsRouter
@@ -27,7 +28,7 @@ pupsRouter
         .catch(next)
     })
     .post(jsonParser, (req, res, next) =>{
-        const {pup_name, parent_id, breed, allergies, hobbies} = req.body
+        const {pup_name, parent_id, breed, allergies, hobbies, image_url} = req.body
         const newPup = {pup_name, parent_id, breed}
 
         for(const [key, value] of Object.entries(newPup)){
