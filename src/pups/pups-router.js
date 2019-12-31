@@ -13,7 +13,8 @@ const sanitizedPup = pup => ({
     breed: xss(pup.breed),
     allergies: xss(pup.allergies),
     hobbies: xss(pup.hobbies),
-    image_url: xss(pup.image_url)
+    image_url: xss(pup.image_url),
+    services: pup.services || {},
 })
 
 pupsRouter

@@ -1,3 +1,5 @@
+DROP TYPE IF EXISTS service_category;
+
 CREATE TYPE service_category AS ENUM (
   'Grooming',
   'Vet',
