@@ -26,8 +26,8 @@ pupServicesRouter
       .catch(next)
     })
     .post(jsonParser, (req, res, next) =>{
-      const { pup_name, pup_id, date, service_type, note } = req.body
-      const newPupService = { pup_name, pup_id, date, service_type }
+      const { pup_id, date, service_type, note } = req.body
+      const newPupService = { pup_id, date, service_type }
 
       for(const [key, value] of Object.entries(newPupService)){
         if(value == null){

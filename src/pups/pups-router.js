@@ -73,6 +73,9 @@ pupsRouter
         })
         .catch(next)
     })
+    .get((req, res) => {
+        res.json(sanitizedPup(res.pup))
+    })
     .patch(jsonParser, (req, res, next) =>{
         const {pup_name, breed, allergies, hobbies} = req.body
         const pupToUpdate = {pup_name, breed, allergies, hobbies}
