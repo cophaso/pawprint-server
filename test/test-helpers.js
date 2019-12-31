@@ -49,6 +49,7 @@ function makePupsArray(users){
   ]
 }
 
+
 function seedUsers(db, users) {
   const preppedUsers = users.map(user => ({
     ...user,
@@ -77,6 +78,7 @@ function seedPupsTables(db, users, pups) {
   })
 }
 
+
 function makeAuthHeader(user, secret = process.env.JWT_SECRET) {
   const token = jwt.sign({ user_id: user.id }, secret, {
     subject: user.user_name,
@@ -88,17 +90,12 @@ function makeAuthHeader(user, secret = process.env.JWT_SECRET) {
 function makePupsFixtures() {
   const testUsers = makeUsersArray()
   const testPups = makePupsArray(testUsers)
+
   return { testUsers, testPups }
 }
 
 function cleanTables(db) {
-  return db.raw(
-    `TRUNCATE
-        pup_services,
-        pups,
-        users
-      RESTART IDENTITY CASCADE`
-  )
+  return db.destroy()
 }
 
 module.exports = {
@@ -107,6 +104,7 @@ module.exports = {
 
   makePupsFixtures,
   seedUsers,
+
   seedPupsTables,
   cleanTables
 }
