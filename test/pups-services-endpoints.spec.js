@@ -34,7 +34,8 @@ describe.only('Pups Services Endpoints', function() {
         app.set('db', db)
     })
 
-    after('disconnect from db', () => db.destroy());
+    after('disconnect from db', () => db.destroy())
+    afterEach('cleanup', () => helpers.cleanTables(db))
 
     describe(`GET /api/pup-services`, () => {
 

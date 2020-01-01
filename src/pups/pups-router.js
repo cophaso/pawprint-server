@@ -42,7 +42,7 @@ pupsRouter
 
         newPup.allergies = allergies
         newPup.hobbies = hobbies
-
+        newPup.image_url = image_url
         PupsService.insertPup(
             req.app.get('db'),
             newPup
