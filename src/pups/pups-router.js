@@ -15,6 +15,7 @@ const sanitizedPup = pup => ({
     hobbies: xss(pup.hobbies),
     image_url: xss(pup.image_url),
     services: pup.services || {},
+    parent: pup.parent || {},
 })
 
 pupsRouter

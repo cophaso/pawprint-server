@@ -20,13 +20,27 @@ const PupsService = {
                             ps.note
                         ) tmp)
                     ) AS "services"`
+                ),
+                db.raw(
+                    `row_to_json(
+                        (SELECT tmp FROM (
+                            SELECT
+                            usr.id,
+                            usr.user_name,
+                            usr.user_email
+                        ) tmp)
+                    ) AS "parent"`
                 )
             )
             .leftJoin(
                 'pup_services AS ps',
                 'p.id',
                 'ps.pup_id'
-                
+            )
+            .leftJoin(
+                'users AS usr',
+                'p.parent_id',
+                'usr.id'
             )
     },
     insertPup(db, newPup){
@@ -40,7 +54,7 @@ const PupsService = {
     },
     getById(db, id){
         return PupsService.getAllPupInfo(db)
-            .where('pups.id', id)
+            .where('p.id', id)
             .first()
     },
     deletePup(db, id){
