@@ -15,7 +15,7 @@ const PupsService = {
                         (SELECT tmp FROM (
                             SELECT
                             ps.id,
-                            ps.date,
+                            ps.appt_date,
                             ps.service_type,
                             ps.note
                         ) tmp)
@@ -26,8 +26,8 @@ const PupsService = {
                         (SELECT tmp FROM (
                             SELECT
                             usr.id,
-                            usr.user_name,
-                            usr.user_email
+                            usr.name,
+                            usr.email
                         ) tmp)
                     ) AS "parent"`
                 )
