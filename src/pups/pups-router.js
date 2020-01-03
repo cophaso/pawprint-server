@@ -101,4 +101,34 @@ pupsRouter
         .catch(next)
     })
 
+pupsRouter
+    .route('/:pup_id/services/')
+    .all((req, res, next) =>{
+        PupsService.getById(
+            req.app.get('db'),
+            req.params.pup_id
+        )
+        .then(pup =>{
+            if(!pup){
+                return res.status(404).json({
+                    error: `Pup doesn't exist`
+                })
+            }
+
+            res.pup = pup
+            next()
+        })
+        .catch(next)
+    })
+    .get((req, res, next) =>{
+        PupsService.getServicesForPups(
+            req.app.get('db'),
+            req.params.pup_id
+        )
+        .then(services =>{
+            res.json(services)
+        })
+        .catch(next)
+    })
+
 module.exports = pupsRouter

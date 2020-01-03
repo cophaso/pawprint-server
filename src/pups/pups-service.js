@@ -57,6 +57,12 @@ const PupsService = {
             .where('p.id', id)
             .first()
     },
+    getServicesForPups(db, pup_id){
+        return db
+            .from('pup_services AS ps')
+            .select('*')
+            .where('ps.pup_id', pup_id)
+    },
     deletePup(db, id){
         return db('pups')
             .where({id})
