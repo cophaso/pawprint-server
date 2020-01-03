@@ -2,6 +2,14 @@
 
 PawPrint is a great way for your company to keep up with the office pups! The app solves the issue of managing dogs in an office. You can schedule when your dog will be in the office and schedule any services (vet, grooming) to make sure the on-call third parties are scheduled for those days.
 
+Live: 
+client: https://pawprint-app.now.sh/
+server: https://guarded-peak-83816.herokuapp.com/ 
+
+App Repo: https://github.com/cophaso/pawprint-app
+
+Team: Kayla Graham, Crystal Ophaso, Amber Meritt
+
 ## Scripts
 
 Start the application `npm start`
