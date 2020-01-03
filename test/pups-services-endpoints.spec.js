@@ -2,7 +2,7 @@ const knex = require('knex')
 const app = require('../src/app')
 const helpers = require('./test-helpers')
 
-describe.only('Pups Services Endpoints', function() {
+describe('Pups Services Endpoints', function() {
     let db 
     
     let fillPupServices = [
