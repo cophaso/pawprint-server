@@ -6,9 +6,20 @@ Live:
 client: https://pawprint-app.now.sh/
 server: https://guarded-peak-83816.herokuapp.com/ 
 
-App Repo: https://github.com/cophaso/pawprint-app
+Server Repo: https://github.com/cophaso/pawprint-server
 
 Team: Kayla Graham, Crystal Ophaso, Amber Meritt
+
+## Technologies Used
+
+Express/Postgresql/Nodejs
+
+## API Endpoints/Documentation
+
+https://guarded-peak-83816.herokuapp.com/api/users</br>
+https://guarded-peak-83816.herokuapp.com/api/auth</br>
+https://guarded-peak-83816.herokuapp.com/api/pups</br>
+https://guarded-peak-83816.herokuapp.com/api/pup-services</br>
 
 ## Scripts
 
