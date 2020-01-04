@@ -12,7 +12,7 @@ Team: Kayla Graham, Crystal Ophaso, Amber Meritt
 
 ## Technologies Used
 
-Express/Postgresql/Nodejs
+Express/Postgresql/Nodejs/Postman/DBeaver
 
 ## API Endpoints/Documentation
 
