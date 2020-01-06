@@ -1,6 +1,6 @@
 # Pawprint API Server
 
-PawPrint is a great way for your company to keep up with the office pups! The app solves the issue of managing dogs in an office. You can schedule when your dog will be in the office and schedule any services (vet, grooming) to make sure the on-call third parties are scheduled for those days.
+PawPrint is a great way for your company to keep up with the office pups! The app solves the issue of managing dogs in an office. You can schedule when your dog will be in the office and schedule any services (vet, grooming, daycare) to make sure the on-call third parties are scheduled for those days.
 
 Live: 
 client: https://pawprint-app.now.sh/
@@ -20,6 +20,33 @@ https://guarded-peak-83816.herokuapp.com/api/users</br>
 https://guarded-peak-83816.herokuapp.com/api/auth</br>
 https://guarded-peak-83816.herokuapp.com/api/pups</br>
 https://guarded-peak-83816.herokuapp.com/api/pup-services</br>
+
+
+```conf
+# - `Example JSON of GET /pups/${pupId}` -
+{
+    "id": 1,
+    "pup_name": "Cocoa",
+    "parent_id": 1,
+    "breed": "Lab",
+    "allergies": "Peanuts",
+    "hobbies": "Plays Ball",
+    "image_url": "https://i.pinimg.com/originals/63/45/38/634538e61eb1fae4d51c345f6b47f376.jpg",
+    "services": {
+        "id": 1,
+        "appt_date": "2019-12-24",
+        "service_type": "Grooming",
+        "note": "Loves bath time"
+    },
+    "parent": {
+        "id": 1,
+        "name": "Amber",
+        "email": "amber@test.com"
+    }
+}
+```
+
+
 
 ## Scripts
 
