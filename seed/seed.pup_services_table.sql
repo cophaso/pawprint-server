@@ -22,6 +22,7 @@ INSERT INTO pup_services
   VALUES
     ('12/24/2019', 'Grooming', 'Loves bath time'),
     ('1/14/2020', 'Daycare', 'Hates small dogs'),
+    ('1/1/20201', 'Visiting', null)
     ('2/1/2020', 'Vet', 'Update on shots');
 
 

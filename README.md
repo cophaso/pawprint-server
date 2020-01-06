@@ -22,8 +22,11 @@ https://guarded-peak-83816.herokuapp.com/api/pups</br>
 https://guarded-peak-83816.herokuapp.com/api/pup-services</br>
 
 
+### Pups Endpoint
 ```conf
-# - `Example JSON of GET /pups/${pupId}` -
+# - GET all pups --> http://localhost:8000/api/pups` - 
+# - GET pup via id --> http://localhost:8000/api/pups/${pupId}` -
+# - Example Response Body of /pups/1 - 
 {
     "id": 1,
     "pup_name": "Cocoa",
@@ -44,6 +47,30 @@ https://guarded-peak-83816.herokuapp.com/api/pup-services</br>
         "email": "amber@test.com"
     }
 }
+
+# - POST new pup --> http://localhost:8000/api/pups -
+# - Example JSON to POST to /api/pups - 
+
+ {
+    "pup_name": "Baloo",
+    "parent_id": 2,
+    "breed": "Dinosaur",
+    "allergies": "Popsicles",
+    "hobbies": "Fishes",
+    "image_url": "https://i.pinimg.com/originals/63/45/38/634538e61eb1fae4d51c345f6b47f376.jpg"
+}
+```
+
+### Pup-services Endpoint
+```conf
+# - GET all pup-services --> http://localhost:8000/api/pup-services` - 
+# - Example Response Body - 
+    {
+        "id": 1,
+        "appt_date": "",
+        "service_type": "Grooming",
+        "note": "Loves bath time"
+    }
 ```
 
 
