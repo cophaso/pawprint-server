@@ -24,8 +24,9 @@ https://guarded-peak-83816.herokuapp.com/api/pup-services</br>
 
 ### Pups Endpoint
 ```conf
-# - GET all pups --> http://localhost:8000/api/pups` - 
-# - GET pup via id --> http://localhost:8000/api/pups/${pupId}` -
+# GET all pups --> http://localhost:8000/api/pups` 
+# GET pup via id --> http://localhost:8000/api/pups/${pupId}`
+# HTTP RESPONSE: 200
 # - Example Response Body of /pups/1 - 
 {
     "id": 1,
@@ -48,7 +49,10 @@ https://guarded-peak-83816.herokuapp.com/api/pup-services</br>
     }
 }
 
-# - POST new pup --> http://localhost:8000/api/pups -
+
+
+# POST new pup --> http://localhost:8000/api/pups 
+# HTTP RESPONSE: 200
 # - Example JSON to POST to /api/pups - 
 
  {
@@ -63,7 +67,8 @@ https://guarded-peak-83816.herokuapp.com/api/pup-services</br>
 
 ### Pup-services Endpoint
 ```conf
-# - GET all pup-services --> http://localhost:8000/api/pup-services` - 
+# GET all pup-services --> http://localhost:8000/api/pup-services` -
+# HTTP RESPONSE: 200
 # - Example Response Body - 
     {
         "id": 1,
