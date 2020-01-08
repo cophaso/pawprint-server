@@ -42,7 +42,6 @@ const PupsService = {
                 'p.parent_id',
                 'usr.id'
             )
-            .groupBy('p.id', 'usr.id')
     },
     insertPup(db, newPup){
         return db
