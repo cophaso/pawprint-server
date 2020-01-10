@@ -11,7 +11,7 @@ const PupsService = {
                 'p.hobbies',
                 'p.image_url',
                 db.raw(
-                    `row_to_json(
+                    `array_to_json(array_agg(row_to_json(
                         (SELECT tmp FROM (
                             SELECT
                             ps.id,
@@ -19,7 +19,7 @@ const PupsService = {
                             ps.service_type,
                             ps.note
                         ) tmp)
-                    ) AS "services"`
+                    ))) AS "services"`
                 ),
                 db.raw(
                     `row_to_json(
@@ -42,6 +42,7 @@ const PupsService = {
                 'p.parent_id',
                 'usr.id'
             )
+            .groupBy('p.id', 'ps.pup_id', 'usr.id')
     },
     insertPup(db, newPup){
         return db
