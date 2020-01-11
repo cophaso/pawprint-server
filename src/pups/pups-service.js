@@ -70,7 +70,7 @@ const PupsService = {
             .delete()
     },
     updatePup(db, id, newPupFields){
-        return knex('pups')
+        return db('pups')
         .where({id})
         .update(newPupFields)
     }

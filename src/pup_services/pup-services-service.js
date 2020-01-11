@@ -24,7 +24,7 @@ const PupsServiceService = {
       .delete()
   },
   updateService(db, id, newPupServiceFields) {
-    return knex('pup_services')
+    return db('pup_services')
       .where({ id })
       .update(newPupServiceFields)
   }
