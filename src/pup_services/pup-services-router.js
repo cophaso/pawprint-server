@@ -1,10 +1,10 @@
-const path = require('path')
-const express = require('express')
-const xss = require('xss')
-const PupServiceService = require('./pup-services-service')
+const path = require('path');
+const express = require('express');
+const xss = require('xss');
+const PupServiceService = require('./pup-services-service');
 
-const pupServicesRouter = express.Router()
-const jsonParser = express.json()
+const pupServicesRouter = express.Router();
+const jsonParser = express.json();
 
 const sanitizedPupService = pup_service => ({
     id: pup_service.id,
@@ -12,7 +12,7 @@ const sanitizedPupService = pup_service => ({
     service_type: xss(pup_service.service_type),
     note: xss(pup_service.note),
 
-})
+});
 
 pupServicesRouter
     .route('/')

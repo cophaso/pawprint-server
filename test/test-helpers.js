@@ -1,5 +1,5 @@
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 function makeUsersArray() {
   return [
